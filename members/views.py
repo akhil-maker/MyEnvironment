@@ -6,6 +6,7 @@ from .forms import SignUpForm
 
 class UserRegisterView(generic.CreateView):
     form_class = SignUpForm
-    template_name = 'registration.html'
+    template_name = 'login.html'
     success_url = reverse_lazy('login')
+    print("done")
     success_message = "You are successfully registered"

@@ -52,20 +52,53 @@
                         <input type="text" class="form-control" name="username" id="id_username" placeholder="myusername" required autofocus>
                         <label for="id_username">Username</label>
                       </div>
+        
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" id="id_email" placeholder="name@example.com">
+                        <label for="id_email">Email address</label>
+                      </div>
+
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="first_name" id="id_first_name" placeholder="First Name">
+                        <label for="id_first_name">First Name</label>
+                      </div>
+
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="last_name" id="id_last_name" placeholder="Last Name">
+                        <label for="id_last_name">Last Name</label>
+                      </div>
+        
                       <hr>
         
                       <div class="form-floating mb-3">
-                        <input type="password" class="form-control" name="password" id="id_password" placeholder="Password">
-                        <label for="id_password">Password</label>
+                        <input type="password" class="form-control" name="password1" id="id_password1" placeholder="Password">
+                        <label for="id_password1">Password</label>
+                      </div>
+
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password2" id="id_password2" placeholder="Password">
+                        <label for="id_password2">Confirm Password</label>
                       </div>
               
                       <div class="d-grid mb-2">
-                        <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" value="Submit">Sign In</button>
+                        <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" value="Submit">Register</button>
                       </div>
         
-                      <a class="d-block text-center mt-2 small" href="http://127.0.0.1:8000/members/register">Doesn't have an account? Sign Up</a>
+                      <a class="d-block text-center mt-2 small" href="http://127.0.0.1:8000/members/login">Have an account? Sign In</a>
         
                       <hr class="my-4">
+        
+                      <div class="d-grid mb-2">
+                        <button class="btn btn-lg btn-google btn-login fw-bold text-uppercase" type="submit">
+                          <i class="fab fa-google me-2"></i> Sign up with Google
+                        </button>
+                      </div>
+        
+                      <div class="d-grid">
+                        <button class="btn btn-lg btn-facebook btn-login fw-bold text-uppercase" type="submit">
+                          <i class="fab fa-facebook-f me-2"></i> Sign up with Facebook
+                        </button>
+                      </div>
         
                     </form>
                   </div>
@@ -75,3 +108,4 @@
           </div>
     </body>
 </html>
+        

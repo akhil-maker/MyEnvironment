@@ -1,0 +1,18 @@
+.form-control {
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-bottom: 5%;
+}
+
+.row {
+    justify-content: center;
+}
+
+.card-body {
+    background-color: #00c3005c;
+}
+
+body {
+    background: url("../assets/green1.jpg");
+    background-size: cover;
+}
