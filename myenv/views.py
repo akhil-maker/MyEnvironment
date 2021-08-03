@@ -1,4 +1,6 @@
+from django.core import paginator
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from .models import Post
 
 # Create your views here.
@@ -17,7 +19,10 @@ def home(request):
                 l.append(i)
         if len(l)>0:
             x.append(l)
-        context = {'posts':x}
+        paginator = Paginator(x, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context = {'posts':x, 'page_obj':page_obj}
         return render(request, 'index.html', context)
     else:            
         for i in range(0, len(posts), 2):
@@ -26,7 +31,10 @@ def home(request):
             if i+1 < len(posts):
                 l.append(posts[i+1])
             x.append(l)
-        context = {'posts':x}
+        paginator = Paginator(x, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context = {'posts':x, 'page_obj':page_obj}
         return render(request, 'index.html', context)
 
 def about(request):
